@@ -41,9 +41,10 @@ public class ContaBancaria {
                         }
                         break;
                     case 4:
+                        System.out.println("SimasBank agradece sua preferência, até logo!");
                         opcoes = false;
                 }
-                System.out.println("SimasBank agradece sua preferência, até logo!");
+
             }
         }
 
@@ -63,8 +64,7 @@ public class ContaBancaria {
     public double transferirValor() {
         System.out.println("Qual é o valor que deseja transferir: ");
         double transferirValor = teclado.nextDouble();
-        if (transferirValor < this.saldo) {
-            System.out.println("O valor digitado é maior que o valor na conta!");
+        if (transferirValor > this.saldo) {
             return 0;
         } else {
             this.saldo -= transferirValor;
